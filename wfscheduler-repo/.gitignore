@@ -1,0 +1,9 @@
+/.settings
+/alf_data_dev
+/.idea
+/target
+*.bat
+*.iml
+*.sh
+.classpath
+.project

@@ -1,0 +1,8 @@
+/.settings
+/.idea
+/target
+*.bat
+*.iml
+*.sh
+.classpath
+.project

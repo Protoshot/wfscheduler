@@ -1,0 +1,37 @@
+<extension>
+  <modules>
+    <module>
+      <id>Aikau Widgets wfscheduler</id>
+      <version>1.0</version>
+      <auto-deploy>true</auto-deploy>
+      <configurations>
+        <config evaluator="string-compare" condition="WebFramework" replace="false">
+          <web-framework>
+            <dojo-pages>
+              <packages>
+                <package name="wfscheduler" location="js/wfscheduler"/>
+                <package name="cron" location="components/wfscheduler" main="jquery-cron"/>
+              </packages>
+            </dojo-pages>
+          </web-framework>
+        </config>
+      </configurations>
+    </module>
+    
+    <module>
+      <id>Override standart components</id>
+      <version>1.0</version>
+      <auto-deploy>true</auto-deploy>
+      <customizations>
+		<customization>
+			<targetPackageRoot>org.alfresco.components.workflow</targetPackageRoot>
+			<sourcePackageRoot>wfscheduler.workflow</sourcePackageRoot>
+		</customization>
+        <customization>
+          <targetPackageRoot>org.alfresco.components.profile</targetPackageRoot>
+          <sourcePackageRoot>wfscheduler.profile</sourcePackageRoot>
+        </customization>
+	  </customizations>
+    </module>
+  </modules>
+</extension>
